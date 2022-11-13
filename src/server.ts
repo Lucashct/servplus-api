@@ -7,7 +7,7 @@ import routes from "./routes";
 AppDataSource.initialize().then(async () => {
     const app = express();
 
-    app.use(express.json)
+    app.use(express.json())
     app.use(morgan('dev'))
     app.use(cors())
     app.use(routes)

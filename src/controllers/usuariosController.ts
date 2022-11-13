@@ -9,13 +9,14 @@ export class UsuariosController {
     const { 
       nome,
       cpf,
+      senha,
       idEmpresaCliente
     } = req.body
 
     try {
       const resposta = new Resposta();
       
-      const novoUsuario = usuarioRepository.create({ nome: nome, cpf: cpf, empresaCliente: {id: idEmpresaCliente} });
+      const novoUsuario = usuarioRepository.create({ nome: nome, cpf: cpf, senha: senha, empresaCliente: {id: idEmpresaCliente} });
       await usuarioRepository.save(novoUsuario);
       
       resposta.setItem(novoUsuario);
