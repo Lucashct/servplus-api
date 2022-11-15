@@ -1,4 +1,4 @@
-import { StatusResultado } from "./StatusResultados"
+import { StatusResultado } from "./enums/StatusResultados"
 
 export class Resposta {
   
