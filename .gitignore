@@ -6,3 +6,5 @@ tmp/
 temp/
 pgdata/
 .env
+src/util/Criptografia.ts
+src/util/funcoes.ts
