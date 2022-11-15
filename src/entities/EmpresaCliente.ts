@@ -19,6 +19,9 @@ export class EmpresaCliente {
   @Column()
   dataCadastro: Date
 
+  @Column()
+  idDeCadastro: string
+
   @OneToMany(() => Usuario, usuario => usuario.empresaCliente)
   usuarios: Usuario[]
 }

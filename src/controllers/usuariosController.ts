@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { usuarioRepository } from "../repositorys/usuarioRepository";
 import { Resposta } from "../util/Resposta";
-import { StatusResultado } from "../util/StatusResultados";
+import { StatusResultado } from "../util/enums/StatusResultados";
 
 export class UsuariosController {
   public async criarUsuario(req: Request, res: Response) {
