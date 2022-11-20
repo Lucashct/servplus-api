@@ -1,3 +1,5 @@
 export enum StatusResultado {
-  SUCESSO, FALHA, ERRO
+  SUCESSO = 'Sucesso', 
+  FALHA = 'Falha', 
+  ERRO = 'Erro'
 }
