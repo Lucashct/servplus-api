@@ -1,4 +1,4 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Usuario } from "./Usuario";
 
 @Entity('empresasClientes')
@@ -16,7 +16,7 @@ export class EmpresaCliente {
   @Column({ nullable: true })
   endereco: string
 
-  @Column()
+  @CreateDateColumn()
   dataCadastro: Date
 
   @Column()
