@@ -11,7 +11,6 @@ export class EmpresaClienteController {
       nome,
       cnpj,
       endereco,
-      dataCadastro,
     } = req.body;
 
     try {
@@ -21,11 +20,10 @@ export class EmpresaClienteController {
         nome: nome,
         cnpj: cnpj,
         endereco: endereco,
-        dataCadastro: dataCadastro,
         idDeCadastro: await criarIdEmpresaCliente(cnpj)
       });
 
-      await empresaClienteRepository.create(novaEmpresaCliente);
+      await empresaClienteRepository.save(novaEmpresaCliente);
 
       resposta.setItem(novaEmpresaCliente);
       resposta.setMensagem('Empresa cliente cadastrada com sucesso!');
